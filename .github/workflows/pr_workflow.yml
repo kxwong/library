@@ -30,6 +30,9 @@ jobs:
 
     - name: Setup Gradle
       uses: gradle/gradle-build-action@main
+      
+    - name: Set executable permissions for gradlew
+      run: chmod +x ./gradlew
         
     - name: Execute Gradle Clean Build
       run: ./gradlew clean build
